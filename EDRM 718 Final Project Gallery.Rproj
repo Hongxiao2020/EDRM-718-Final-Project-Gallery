@@ -11,3 +11,13 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
+
+## this is the script I like best
+*3.5 Scatterplot of Senior-year GPA and optimism by discipline*
+```{r}
+ggplot(data = data, mapping = aes(x = sygpa, y = optimism, col = Discipline)) +
+  geom_point() +
+   labs(x= "Senior-year GPA", y = "The degree of optimism about future employment", 
+        title = "Scatterplot of Senior-year GPA and optimism") + 
+  stat_smooth(method = "lm")
+```
